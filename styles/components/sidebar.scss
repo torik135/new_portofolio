@@ -1,0 +1,203 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  background: #11101d;
+  padding: 6px 14px;
+  transition: all 0.3s ease;
+
+  #btn {
+    position: absolute;
+    left: 50%;
+    top: 17px;
+    font-size: 22px;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+  }
+
+  ul {
+    margin-top: 20px;
+
+    li {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      margin: 0;
+      justify-content: center;
+      list-style: none;
+      line-height: 50px;
+      transition: all 0.2s ease;
+
+      &:hover .tooltip {
+        transition: all 0.4s ease;
+        top: 50%;
+        left: 130%;
+        opacity: 1;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        border-radius: 7px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+
+        &:hover {
+          color: #11101d;
+          background: #fff;
+        }
+
+        i {
+          height: 50px;
+          min-width: 50px;
+          font-size: 25px;
+          line-height: 60px;
+          text-align: center;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .link_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  .logo_content {
+    .logo {
+      color: #fff;
+      display: flex;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease;
+
+      i {
+        font-size: 28px;
+        margin-right: 5px;
+      }
+
+      .logo_name {
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .profile_content {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .profile {
+      position: relative;
+      padding: 10px 16px;
+      height: 60px;
+      background: none;
+      transition: all 0.3s ease;
+
+      #love {
+        position: absolute;
+        left: 50%;
+        bottom: 29px;
+        transform: translateX(-50%);
+        min-width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: red;
+          cursor: pointer;
+        }
+      }
+
+      .profile_detail {
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+
+        i {
+          width: 45px;
+        }
+
+        .name_job {
+          margin-left: 10px;
+
+          .name {
+            font-size: 25px;
+            font-weight: 400;
+          }
+
+          .job {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active {
+  width: 240px;
+  cursor: pointer;
+
+  #btn {
+    left: 90%;
+    transform: translateX(-60%) translateY(60%) rotate(180deg);
+  }
+
+  ul {
+    li {
+      .tooltip {
+        display: none;
+      }
+    }
+  }
+
+  .link_name {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .logo_content {
+    .logo {
+      opacity: 1;
+      pointer-events: none;
+    }
+  }
+
+  .profile_content {
+    .profile {
+      background: #1d1b31;
+
+      #love {
+        left: 88%;
+      }
+
+      .profile_detail {
+        opacity: 1;
+      }
+    }
+  }
+}
