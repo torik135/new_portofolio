@@ -12,7 +12,7 @@ import {
 } from 'react-icons/fa';
 
 import { Tooltip } from '../Utils/Tooltip/index.jsx';
-import { Navlist } from './Navlist/index.jsx';
+import { Navlist } from '../Utils/Navlist/index.jsx';
 
 const Sidebar = () => {
   const [hamBtn, setHamBtn] = useState(true);
