@@ -1,5 +1,6 @@
 import { Sidebar } from '../Sidebar/index.jsx';
 import { Navheader } from '../Navheader/index.jsx';
+import { Footer } from '../Footer/index.jsx';
 
 const Layout = ({ children }) => {
   return (
@@ -12,6 +13,8 @@ const Layout = ({ children }) => {
         <Sidebar />
       </nav>
       {children}
+
+      <Footer />
     </>
   );
 };
