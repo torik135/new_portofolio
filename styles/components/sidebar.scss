@@ -6,7 +6,7 @@
   width: 80px;
   background: #11101d;
   padding: 6px 14px;
-  transition: all 0.3s ease;
+  transition: var(--anim-bezier);
 
   #btn {
     position: absolute;
@@ -20,7 +20,7 @@
     line-height: 50px;
     cursor: pointer;
     transform: translateX(-50%);
-    transition: all 0.5s ease;
+    transition: var(--anim-bezier);
   }
 
   ul {
@@ -34,10 +34,10 @@
       justify-content: center;
       list-style: none;
       line-height: 50px;
-      transition: all 0.2s ease;
+      transition: var(--anim-bezier);
 
       &:hover .tooltip {
-        transition: all 0.4s ease;
+        transition: var(--anim-bezier);
         top: 50%;
         left: 130%;
         opacity: 1;
@@ -49,7 +49,7 @@
         color: #fff;
         border-radius: 7px;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: var(--anim-bezier);
         white-space: nowrap;
 
         &:hover {
@@ -72,7 +72,7 @@
   .link_name {
     opacity: 0;
     pointer-events: none;
-    transition: all 0.2s ease;
+    transition: var(--anim-bezier);
   }
 
   .logo_content {
