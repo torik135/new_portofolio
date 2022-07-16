@@ -1,5 +1,10 @@
 :root {
   --black20: rgba(0, 0, 0, 0.2);
+  --white: rgba(255, 255, 255, 1);
+
+  --prim-color: rgba(1, 1, 1, 1);
+  --secd-color: rgba(255, 255, 2, 1);
+
   --def-shadow: 0 5px 10px var(--black20);
   --anim-bezier: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
