@@ -1,6 +1,7 @@
 .navheader {
   position: absolute;
   top: 1rem;
+  right: 2rem;
   background: #000;
   padding: 0 25px;
   box-shadow: var(--def-shadow);
@@ -9,7 +10,7 @@
 
 .navheader_content {
   display: flex;
-  height: 120px;
+  height: 90px;
   align-items: center;
   list-style: none;
 
@@ -25,16 +26,18 @@
 
     &:hover .link_icon {
       color: red;
-      transform: translateY(-10px);
+      transform: translateY(-5px);
       transition: var(--anim-bezier);
     }
 
     &:hover .link_name {
       opacity: 1;
+      transition: all 0.5s ease;
     }
 
     .link_icon {
-      font-size: 38px;
+      font-size: 30px;
+      transition: all 0.3s ease;
     }
 
     .link_name {
@@ -43,6 +46,7 @@
       font-size: 12px;
       font-weight: 500;
       opacity: 0;
+      transition: all 0.3s ease;
     }
   }
 }
