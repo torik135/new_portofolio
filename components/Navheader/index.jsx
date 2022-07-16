@@ -6,9 +6,10 @@ import { FaRegStar as HomeIcon } from 'react-icons/fa';
 
 const Navheader = () => {
   useEffect(() => {
-    const linkItem = document.querySelectorAll('.link_container');
+    const linkItem = document.querySelectorAll('.link_icon');
+
     linkItem.forEach((l, index) => {
-      l.addEventListener('click', (e) => {
+      l.parentElement.addEventListener('click', () => {
         const indicator = document.querySelector('.indicator');
         indicator.style.left = `${index * 96 + 73}px`;
       });
@@ -18,21 +19,21 @@ const Navheader = () => {
   return (
     <nav className='navheader'>
       <ul className='navheader_content'>
-        <span className='link_container'>
+        <div className='link_container'>
           <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </span>
+        </div>
 
-        <span className='link_container'>
+        <div className='link_container'>
           <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </span>
+        </div>
 
-        <span className='link_container'>
+        <div className='link_container'>
           <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </span>
+        </div>
 
-        <span className='link_container'>
+        <div className='link_container'>
           <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </span>
+        </div>
 
         <span className='indicator'></span>
       </ul>

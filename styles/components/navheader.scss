@@ -25,6 +25,8 @@
 
     &:hover .link_icon {
       color: red;
+      transform: translateY(-10px);
+      transition: var(--anim-bezier);
     }
 
     &:hover .link_name {
@@ -45,14 +47,14 @@
   }
 }
 
-.location {
-  .link_icon {
-    color: red;
-  }
-  .link_name {
-    color: red;
-  }
-}
+// .location {
+//   .link_icon {
+//     color: red;
+//   }
+//   .link_name {
+//     color: red;
+//   }
+// }
 
 .indicator {
   position: absolute;
@@ -62,14 +64,9 @@
   width: 36px;
   border: 6px solid #fff;
   border-radius: 50%;
-  // border-top-right-radius: 15px;
-  // border-top-left-radius: 15px;
-  // border-bottom-left-radius: 25px;
-  // border-bottom-right-radius: 25px;
-
   background: #000;
   transform: translateX(-50%);
-  transition: all 0.3s ease-in;
+  transition: var(--anim-bezier);
 
   &::before,
   &::after {
