@@ -1,0 +1,26 @@
+.toast {
+  position: fixed;
+  bottom: 0;
+  left: 250px;
+  background: red;
+  height: 50px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: var(--anim-bezier);
+
+  .toast_content {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    min-width: 100px;
+    justify-content: center;
+  }
+}
+
+.show {
+  .toast {
+    opacity: 1;
+    transition: var(--anim-bezier);
+    bottom: 5rem;
+  }
+}
