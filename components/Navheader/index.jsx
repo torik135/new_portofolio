@@ -4,7 +4,7 @@ import { Navlist } from '../Utils/Navlist/index.jsx';
 
 import { FaRegStar as HomeIcon } from 'react-icons/fa';
 
-const Navheader = () => {
+const Navheader = ({ children }) => {
   useEffect(() => {
     const linkItem = document.querySelectorAll('.link_container');
 
@@ -17,27 +17,30 @@ const Navheader = () => {
   }, []);
 
   return (
-    <nav className='navheader'>
-      <ul className='navheader_content'>
-        <div className='link_container'>
-          <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </div>
+    <>
+      <nav className='navheader'>
+        <ul className='navheader_content'>
+          <div className='link_container'>
+            <Navlist link_to='#credits' icon=<HomeIcon /> text='Thanks' />
+          </div>
 
-        <div className='link_container'>
-          <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </div>
+          <div className='link_container'>
+            <Navlist link_to='#home' icon=<HomeIcon /> text='Techs' />
+          </div>
 
-        <div className='link_container'>
-          <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </div>
+          <div className='link_container'>
+            <Navlist link_to='#home' icon=<HomeIcon /> text='Lives' />
+          </div>
 
-        <div className='link_container'>
-          <Navlist link_to='#home' icon=<HomeIcon /> text='Home' />
-        </div>
+          <div className='link_container'>
+            <Navlist link_to='#home' icon=<HomeIcon /> text='Skills' />
+          </div>
 
-        <span className='indicator'></span>
-      </ul>
-    </nav>
+          <span className='indicator'></span>
+        </ul>
+      </nav>
+      {children}
+    </>
   );
 };
 
