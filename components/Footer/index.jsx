@@ -14,7 +14,8 @@ const Footer = () => {
         <div className='footer_icon'>
           <i>{foot ? <FaSortDown /> : <FaSortUp />}</i>
         </div>
-        <div className='copyright'>torik135 | 2022</div>
+        <div className='warn'>Not Optimize for Mobile just yet!</div>
+        <div className='copyright'>&copy; torik135 | 2022</div>
       </div>
     </footer>
   );

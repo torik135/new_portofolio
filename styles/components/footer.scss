@@ -16,10 +16,20 @@
     color: var(--white);
     transition: var(--anim-bezier);
 
+    .warn {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      padding-left: 2rem;
+      transition: var(--anim-bezier);
+    }
+
     .copyright {
       opacity: 0;
       padding-right: 6rem;
       pointer-events: none;
+      transition: var(--anim-bezier);
     }
 
     .footer_icon {
@@ -34,8 +44,36 @@
       border-top-right-radius: 25px;
       border-bottom-right-radius: 12px;
       border-bottom-left-radius: 12px;
+      border-right: 2px solid #fff;
+      border-left: 2px solid #fff;
       cursor: pointer;
       transition: var(--anim-bezier);
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: -9px;
+        height: 15px;
+        width: 15px;
+        background: #111;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        right: -9px;
+        height: 15px;
+        width: 15px;
+        background: #111;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: all 0.3s ease-in;
+      }
 
       i {
         display: flex;
@@ -56,9 +94,52 @@
       opacity: 1;
     }
 
+    .warn {
+      opacity: 1;
+      position: absolute;
+      left: 2rem;
+      color: red;
+      font-size: 12px;
+      transition: var(--anim-bezier);
+    }
+
     .footer_icon {
       height: 60px;
       bottom: 50px;
+      border-right: 2px solid transparent;
+      border-left: 2px solid transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 47px;
+        left: -16px;
+        height: 15px;
+        width: 20px;
+        background: #111;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 50px;
+        transform: rotate(45deg);
+        transition: all 0.3s ease-in;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 47px;
+        right: -16px;
+        height: 15px;
+        width: 20px;
+        background: #111;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 50px;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in;
+      }
     }
   }
 }
