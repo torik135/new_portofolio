@@ -1,0 +1,27 @@
+.pagehome {
+  position: absolute;
+  left: 240px;
+  top: 1rem;
+  height: 100%;
+  width: auto;
+  border: 1px solid red;
+  z-index: -1;
+
+  .pagehome_content {
+    font-size: 25px;
+    font-weight: 400;
+    color: #111;
+    margin: 1.5rem;
+
+    h1 {
+      width: 500px;
+      border: 1px solid blue;
+    }
+
+    .content {
+      border: 1px solid gray;
+      margin-top: 4rem;
+      // width: 100%;
+    }
+  }
+}
