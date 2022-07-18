@@ -9,6 +9,7 @@
   --shadow-1: 5px -5px 5px var(--black20);
 
   --anim-bezier: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --anim-04s: all 0.4s ease-out;
 }
 
 * {

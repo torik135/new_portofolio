@@ -1,28 +1,57 @@
 .footer {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  right: 2rem;
+  bottom: 1rem;
+  width: 434px;
   z-index: 0;
 
   .footer_content {
     display: flex;
-    align-items: center;
-    height: 1px;
-    justify-content: right;
-    padding: 0;
-    padding-right: 3rem;
+    flex-direction: column;
+    height: 0;
+    align-items: right;
+    justify-content: center;
+    padding-right: 1rem;
+    border-radius: 7px;
+    box-shadow: var(--def-shadow);
     background: var(--prim-color);
     color: var(--white);
     transition: var(--anim-bezier);
 
     .warn {
       position: absolute;
-      left: 0;
       opacity: 0;
+      right: 3rem;
+      bottom: 90px;
       pointer-events: none;
       padding-left: 2rem;
       transition: var(--anim-bezier);
+
+      &::after {
+        content: '';
+        background: var(--prim-color);
+        border-radius: 50%;
+        position: absolute;
+        right: -25px;
+        bottom: 20px;
+        height: 20px;
+        width: 20px;
+        transition: var(--anim-bezier);
+        opacity: 0;
+      }
+
+      &::before {
+        content: '';
+        background: var(--prim-color);
+        border-radius: 50%;
+        position: absolute;
+        right: -45px;
+        bottom: 13px;
+        height: 15px;
+        width: 15px;
+        transition: var(--anim-bezier);
+        opacity: 0;
+      }
     }
 
     .copyright {
@@ -97,10 +126,43 @@
     .warn {
       opacity: 1;
       position: absolute;
-      left: 2rem;
+      right: 9rem;
+      bottom: 90px;
       color: red;
+      background: var(--prim-color);
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: var(--def-shadow);
       font-size: 12px;
       transition: var(--anim-bezier);
+
+      &::after {
+        content: '';
+        background: var(--prim-color);
+        box-shadow: var(--def-shadow);
+        border-radius: 50%;
+        position: absolute;
+        right: -25px;
+        bottom: 20px;
+        height: 20px;
+        width: 20px;
+        transition: var(--anim-bezier);
+        opacity: 1;
+      }
+
+      &::before {
+        content: '';
+        background: var(--prim-color);
+        box-shadow: var(--def-shadow);
+        border-radius: 50%;
+        position: absolute;
+        right: -45px;
+        bottom: 13px;
+        height: 15px;
+        width: 15px;
+        transition: var(--anim-bezier);
+        opacity: 1;
+      }
     }
 
     .footer_icon {
